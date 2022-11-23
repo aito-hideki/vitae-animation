@@ -1,3 +1,7 @@
+html {
+  color: white;
+}
+
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;

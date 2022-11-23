@@ -23,10 +23,10 @@ export default defineConfig({
     {
       name: 'fix-swipper-css',
       enforce: 'pre',
-      resolveId(id) {
+      resolveId (id) {
         if (id === 'swiper.css') return 'fix-swiper.css'
       },
-      async load(id) {
+      async load (id) {
         if (id === 'fix-swiper.css') {
           return await fs.readFileSync(
             './node_modules/swiper/swiper.min.css',
@@ -38,10 +38,10 @@ export default defineConfig({
     {
       name: 'fix-swipper-scrollbar-css',
       enforce: 'pre',
-      resolveId(id) {
+      resolveId (id) {
         if (id === 'scrollbar.css') return 'fix-swiper-scrollbar.css'
       },
-      async load(id) {
+      async load (id) {
         if (id === 'fix-swiper-scrollbar.css') {
           return await fs.readFileSync(
             './node_modules/swiper/modules/scrollbar/scrollbar.min.css',
@@ -58,5 +58,8 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 1024
+  },
+  server: {
+    port: 3000
   }
 })

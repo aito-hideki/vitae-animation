@@ -12,6 +12,8 @@ declare module '@vue/runtime-core' {
     SectionOrange: typeof import('./src/components/section/orange.vue')['default']
     SectionTexts: typeof import('./src/components/section/texts.vue')['default']
     SectionWarmWhite: typeof import('./src/components/section/warm-white.vue')['default']
+    Sunshine: typeof import('./src/components/sunshine.vue')['default']
+    SunshineEllipse: typeof import('./src/components/sunshine-ellipse.vue')['default']
   }
 }
 
