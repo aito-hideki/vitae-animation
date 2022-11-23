@@ -43,8 +43,8 @@ onMounted(() => {
 }
 
 @keyframes light-bulb-starting {
-  0% { top: calc(40% + 450px); }
-  100% { top: 40%; }
+  0% { top: 100%; transform: translate(-50%, 0); }
+  100% { top: 40%; transform: translate(-50%, -50%); }
 }
 @keyframes light-bulb-floating {
   0% { transform: translate(-50%, -50%) }
