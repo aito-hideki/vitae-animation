@@ -8,6 +8,7 @@ export default defineConfig({
     extend: {
       colors: {
         sun: '#C32F00',
+        tomato: '#FF4E27',
         orange: '#D35100',
         'warm-white': '#FFA641',
         'daylight-white': '#CFE3E5'

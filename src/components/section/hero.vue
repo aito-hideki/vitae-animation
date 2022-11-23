@@ -1,5 +1,5 @@
 <template>
   <div class="h-screen">
-    Hero secction
+    Hero section
   </div>
 </template>
