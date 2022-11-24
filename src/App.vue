@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="bg-sun">
+    <sunshine-backs />
     <div class="mix-blend-overlay">
       <sunshine />
-      <sunshine-ellipse />
       <light-bulb />
-      <sunshine-overlay />
     </div>
+    <sunshine-overlay />
     <div class="relative">
       <section-hero />
       <section-texts />

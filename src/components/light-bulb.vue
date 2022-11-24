@@ -1,17 +1,20 @@
 <template>
-  <div class="mix-blend-overlay">
-    <img
-      class="light-bulb mix-blend-overlay fixed-center"
-      :class="{
-        'light-bulb--started': phase === 'started',
-        'light-bulb--floating': phase === 'floating',
-      }"
-      src="/images/new-vitae-bulb-PNG.png"
-      alt="light bulb"
-      width="338"
-      height="450"
-    >
-  </div>
+  <img
+    class="fixed-screen w-screen h-screen object-cover opacity-60"
+    src="/images/noisetop-1.webp"
+    loading="lazy"
+  >
+  <img
+    class="light-bulb mix-blend-overlay fixed-center w-80 h-110 2xl:w-120 2xl:h-160 z-7"
+    :class="{
+      'light-bulb--started': phase === 'started',
+      'light-bulb--floating': phase === 'floating',
+    }"
+    src="/images/new-vitae-bulb-PNG.png"
+    alt="light bulb"
+    width="320"
+    height="440"
+  >
 </template>
 
 <script setup lang="ts">
@@ -37,7 +40,7 @@ onMounted(() => {
   animation-timing-function: ease;
 }
 .light-bulb--floating {
-  top: 46%;
+  top: 45%;
   animation-name: light-bulb-floating;
   animation-duration: 6s;
   animation-timing-function: ease;
@@ -46,7 +49,7 @@ onMounted(() => {
 
 @keyframes light-bulb-starting {
   0% { top: 100%; transform: translate(-50%, 0); }
-  100% { top: 46%; transform: translate(-50%, -50%); }
+  100% { top: 45%; transform: translate(-50%, -50%); }
 }
 @keyframes light-bulb-floating {
   0% { transform: translate(-50%, -50%) }

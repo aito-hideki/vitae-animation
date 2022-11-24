@@ -1,12 +1,5 @@
 <template>
-  <div
-    class="sunshine mix-blend-lighten"
-    data-poster-url="/videos/light-only-12-poster-00001.jpg"
-    data-video-urls="/videos/light-only-12-transcode.mp4,/videos/light-only-12-transcode.webm"
-    data-autoplay="true"
-    data-loop="true"
-    data-wf-ignore="true"
-  >
+  <div class="sunshine mix-blend-lighten">
     <video
       class="sunshine__video object-cover"
       autoplay
@@ -29,14 +22,16 @@
 <style scoped>
 .sunshine {
   position: fixed;
-  top: -10%;
+  top: -11%;
   left: -10%;
-  right: -13%;
+  right: -14.5%;
   bottom: -10%;
 }
 .sunshine__video {
   width: 100%;
   height: 100%;
-  background-image: url('/videos/light-only-12-poster-00001.jpg')
+  background-image: url('/videos/light-only-12-poster-00001.jpg');
+  background-position: center;
+  background-size: cover;
 }
 </style>

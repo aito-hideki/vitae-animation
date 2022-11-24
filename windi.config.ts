@@ -11,7 +11,9 @@ export default defineConfig({
         tomato: '#FF4E27',
         orange: '#D35100',
         'warm-white': '#FFA641',
-        'daylight-white': '#CFE3E5'
+        'daylight-white': '#CFE3E5',
+        yellow: '#FFDD66',
+        'dull-yellow': '#FFEEAA'
       }
     }
   },
