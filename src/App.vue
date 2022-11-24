@@ -1,6 +1,6 @@
 <template>
   <div
-    class="duration-300"
+    class="duration-500"
     :class="colorClass"
   >
     <sunshine-backs />
@@ -37,17 +37,11 @@
 import { computed } from 'vue'
 import { usePages } from './use/pages'
 
-const { page } = usePages()
+const { scrollPos } = usePages()
 const colorClass = computed(() => {
-  switch (page.value) {
-    case 1:
-      return 'bg-sun'
-    case 2:
-      return 'bg-orange'
-    case 3:
-      return 'bg-warm-white'
-    default:
-      return 'bg-daylight-white'
-  }
+  if (scrollPos.value < 0.5) { return 'bg-sun' }
+  if (scrollPos.value < 1.5) { return 'bg-orange' }
+  if (scrollPos.value < 2.5) { return 'bg-warm-white' }
+  return 'bg-daylight-white'
 })
 </script>

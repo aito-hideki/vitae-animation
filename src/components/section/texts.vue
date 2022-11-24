@@ -3,7 +3,7 @@
     <div class="texts-section__labels lg:text-2xl">
       We know
     </div>
-    <div class="texts-section__labels text-3xl sm:text-6xl lg:text-8xl">
+    <div class="texts-section__labels text-3xl sm:text-6xl lg:text-7xl">
       Lighting has<br>
       the power to
     </div>
