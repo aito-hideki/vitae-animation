@@ -20,13 +20,17 @@ const props = defineProps<{
 }>()
 
 const { scrollPos } = usePages()
-const textOpacity = computed(() => props.posStart - scrollPos.value * 2)
+const textOpacity = computed(() => {
+  const opacity = props.posStart - scrollPos.value * 2
+  return opacity < 1 ? opacity * 2 : 0
+})
+const paddingBottom = computed(() => textOpacity.value * 160 + 'px')
 </script>
 
 <style scoped>
 .floating-text {
   position: absolute;
-  bottom: 160px;
+  bottom: v-bind(paddingBottom);
   left: 50%;
   transform: translateX(-50%);
 
