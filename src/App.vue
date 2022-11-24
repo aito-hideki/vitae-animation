@@ -12,11 +12,22 @@
     <div class="relative">
       <section-hero />
       <section-texts />
-      <div
-        v-for="i in 3"
-        :key="i"
-        class="h-screen"
-      />
+      <div class="relative container h-screen px-5 mx-auto">
+        <floating-text
+          title="Wind you down, naturally."
+          description="Use our warm-white mode in the evenings after work to wind down, until 90 min before sleep when the pure orange mode should be used."
+          :pos-start="4.5"
+        />
+      </div>
+      <div class="relative container h-screen px-5 mx-auto">
+        <floating-text
+          class="text-black"
+          title="Work mode: activated."
+          description="Inspired by natural daylight and with strengthened blue/cyan emission, the white Vitae light helps boost your productivity and alertness during the day, ideal for work and study."
+          :pos-start="6.5"
+        />
+      </div>
+      <div class="h-screen" />
     </div>
     <pagination />
   </div>

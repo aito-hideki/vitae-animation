@@ -6,6 +6,7 @@ import '@vue/runtime-core'
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ArrowDown: typeof import('./src/components/arrow-down.vue')['default']
+    FloatingText: typeof import('./src/components/floating-text.vue')['default']
     LightBulb: typeof import('./src/components/light-bulb.vue')['default']
     Pagination: typeof import('./src/components/pagination.vue')['default']
     SectionDaylightWhite: typeof import('./src/components/section/daylight-white.vue')['default']
