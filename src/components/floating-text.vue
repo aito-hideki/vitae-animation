@@ -2,13 +2,14 @@
   <transition>
     <div
       v-if="scrollPos >= from && scrollPos <= to"
-      class="floating-text"
     >
-      <div class="text-5xl mb-8">
-        {{ title }}
-      </div>
-      <div class="text-2xl">
-        {{ description }}
+      <div class="floating-text">
+        <div class="text-5xl mb-8">
+          {{ title }}
+        </div>
+        <div class="text-2xl">
+          {{ description }}
+        </div>
       </div>
     </div>
   </transition>
@@ -27,7 +28,7 @@ const props = defineProps<{
 
 const { scrollPos } = usePages()
 const textOpacity = computed(() => (props.to - scrollPos.value) * 3)
-const paddingBottom = computed(() => textOpacity.value * 160 + 'px')
+const paddingBottom = computed(() => textOpacity.value * 160 + 80 + 'px')
 </script>
 
 <style scoped>
