@@ -5,9 +5,11 @@ export const usePages = () => {
   const { height } = useWindowSize()
   const { y } = useScroll(document)
 
-  const page = computed(() => Math.floor(y.value / height.value) + 1)
+  const scrollPos = computed(() => y.value / height.value)
+  const page = computed(() => Math.floor(scrollPos.value) + 1)
 
   return {
+    scrollPos,
     page
   }
 }
