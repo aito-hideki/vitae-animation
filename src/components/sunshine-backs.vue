@@ -14,7 +14,7 @@
       />
     </div>
     <div
-      v-else-if="page === 2"
+      v-else-if="page >= 2"
       class="bg-orange"
     >
       <div class="fixed-screen gradient-overlay" />
@@ -24,12 +24,15 @@
 
 <script setup lang="ts">
 import { usePages } from '@/use/pages'
+import { computed } from 'vue'
 
-const { page } = usePages()
+const { page, scrollPos } = usePages()
+const gradoverOpacity = computed(() => (1 - Math.abs(2.5 - scrollPos.value) / 2) * 0.7)
 </script>
 
 <style scoped>
 .gradient-overlay {
   background: radial-gradient(66.36% 66.36% at 50% 33.64%, rgba(22, 21, 31, 0) 0%, #4A1307 100%);
+  opacity: v-bind(gradoverOpacity);
 }
 </style>
