@@ -5,7 +5,7 @@
     loading="lazy"
   >
   <img
-    class="light-bulb mix-blend-overlay fixed-center w-80 h-110 2xl:w-120 2xl:h-160 z-7"
+    class="light-bulb mix-blend-overlay fixed-center w-80 h-110 2xl:w-120 2xl:h-160"
     :class="{
       'light-bulb--started': phase === 'started',
       'light-bulb--floating': phase === 'floating',

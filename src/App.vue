@@ -10,5 +10,6 @@
       <section-hero />
       <section-texts />
     </div>
+    <pagination />
   </div>
 </template>
