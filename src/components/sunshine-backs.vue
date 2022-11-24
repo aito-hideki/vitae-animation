@@ -27,7 +27,10 @@ import { usePages } from '@/use/pages'
 import { computed } from 'vue'
 
 const { page, scrollPos } = usePages()
-const gradoverOpacity = computed(() => (1 - Math.abs(2.5 - scrollPos.value) / 2) * 0.7)
+const gradoverOpacity = computed(() => {
+  const opacity = (1 - Math.abs(2.5 - scrollPos.value) / 2) * 0.7
+  return opacity > 0.3 ? opacity : 0.3
+})
 </script>
 
 <style scoped>

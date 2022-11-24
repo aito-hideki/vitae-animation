@@ -6,7 +6,7 @@ export const usePages = () => {
   const { y } = useScroll(document)
 
   const scrollPos = computed(() => y.value / height.value)
-  const page = computed(() => Math.floor(scrollPos.value) + 1)
+  const page = computed(() => Math.floor(scrollPos.value + 0.2) + 1)
 
   return {
     scrollPos,
