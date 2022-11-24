@@ -3,7 +3,7 @@
     <div class="flex mr-auto">
       <div class="relative text-sm sm:text-lg transform rotate-270 uppercase">
         <transition>
-          <div v-if="scrollPos < 0.6" />
+          <div v-if="scrollPos < 0.7" />
           <div
             v-else-if="scrollPos < 1.5"
             class="absolute left-0 whitespace-nowrap"
