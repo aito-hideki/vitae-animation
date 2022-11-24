@@ -1,12 +1,17 @@
 <template>
-  <div class="floating-text">
-    <div class="text-5xl mb-8">
-      {{ title }}
+  <transition>
+    <div
+      v-if="scrollPos >= from && scrollPos <= to"
+      class="floating-text"
+    >
+      <div class="text-5xl mb-8">
+        {{ title }}
+      </div>
+      <div class="text-2xl">
+        {{ description }}
+      </div>
     </div>
-    <div class="text-2xl">
-      {{ description }}
-    </div>
-  </div>
+  </transition>
 </template>
 
 <script setup lang="ts">
@@ -16,11 +21,12 @@ import { computed } from 'vue'
 const props = defineProps<{
   title: string,
   description: string,
-  posStart: number
+  from: number
+  to: number
 }>()
 
 const { scrollPos } = usePages()
-const textOpacity = computed(() => Math.min(0.5, props.posStart - scrollPos.value * 2) * 2)
+const textOpacity = computed(() => (props.to - scrollPos.value) * 3)
 const paddingBottom = computed(() => textOpacity.value * 160 + 'px')
 </script>
 

@@ -10,7 +10,8 @@
     <floating-text
       title="Avoid Blue Light."
       description="Use Vitae lighting 90 minutes before sleep, as it doesn't surpress melatonin production and allows you to fall asleep easily and be well rested."
-      :pos-start="2.5"
+      :from="0.5"
+      :to="1.2"
     />
   </div>
 </template>
