@@ -20,7 +20,7 @@ const props = defineProps<{
 }>()
 
 const { scrollPos } = usePages()
-const textOpacity = computed(() => Math.min(1, props.posStart - scrollPos.value * 2))
+const textOpacity = computed(() => Math.min(0.5, props.posStart - scrollPos.value * 2) * 2)
 const paddingBottom = computed(() => textOpacity.value * 160 + 'px')
 </script>
 

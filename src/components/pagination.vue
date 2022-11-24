@@ -5,13 +5,13 @@
         <transition>
           <div v-if="scrollPos <= 0.6" />
           <div
-            v-else-if="scrollPos < 2.5"
+            v-else-if="scrollPos < 1.5"
             class="absolute left-0 whitespace-nowrap"
           >
             Orange
           </div>
           <div
-            v-else-if="page < 3.5"
+            v-else-if="page < 2.5"
             class="absolute left-0 whitespace-nowrap"
           >
             Warm White
