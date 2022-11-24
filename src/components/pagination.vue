@@ -4,7 +4,7 @@
       <div class="relative text-sm sm:text-lg transform rotate-270 uppercase">
         <transition>
           <div
-            v-if="page === 2"
+            v-if="scrollPos >= 0.5 && scrollPos < 2"
             class="absolute left-0 whitespace-nowrap"
           >
             Orange
@@ -48,7 +48,7 @@
 <script setup lang="ts">
 import { usePages } from '@/use/pages'
 
-const { page } = usePages()
+const { page, scrollPos } = usePages()
 </script>
 
 <style scoped>
