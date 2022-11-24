@@ -39,8 +39,10 @@ const paddingBottom = computed(() => textOpacity.value * 160 + 80 + 'px')
   left: 50%;
   transform: translateX(-50%);
 
+  width: 100%;
   text-align: center;
   opacity: v-bind(textOpacity);
   max-width: 580px;
+  padding: 40px;
 }
 </style>
