@@ -2,6 +2,7 @@
   <transition>
     <div
       v-if="scrollPos >= from && scrollPos <= to"
+      class="absolute top-0 left-0 right-0 bottom-0"
     >
       <div class="floating-text">
         <div class="text-5xl mb-8">
